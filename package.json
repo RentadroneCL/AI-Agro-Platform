@@ -1,0 +1,39 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.16.7",
+        "@babel/plugin-proposal-class-properties": "^7.16.7",
+        "@babel/preset-env": "^7.16.7",
+        "@fortawesome/fontawesome-free": "^5.15.2",
+        "@mapbox/geojson-merge": "^1.1.1",
+        "@tailwindcss/forms": "^0.3.1",
+        "@tailwindcss/typography": "^0.4.0",
+        "@turf/meta": "^6.3.0",
+        "@uppy/core": "^1.16.0",
+        "@uppy/dashboard": "^1.16.0",
+        "@uppy/xhr-upload": "^1.6.10",
+        "alpinejs": "^3.7.0",
+        "autoprefixer": "^10.0.2",
+        "axios": "^0.21",
+        "chart.js": "^2.9.4",
+        "geotiff": "^1.0.9",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "ol": "^6.9.0",
+        "ol-hashed": "^2.1.0",
+        "postcss": "^8.1.14",
+        "postcss-import": "^14.0.1",
+        "simple-datatables": "^3.0.2",
+        "tailwindcss": "^2.2.2",
+        "threads-plugin": "^1.4.0"
+    }
+}

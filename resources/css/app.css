@@ -1,0 +1,106 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* custom styles for leaflet maps */
+.leaflet-container {
+  @apply z-0;
+}
+
+.leaflet-top,
+.leaflet-left,
+.leaflet-bottom,
+.leaflet-right {
+  position: absolute;
+  z-index: 0; /* was 1000 */
+  pointer-events: none;
+}
+
+.leaflet-tooltip.custom-labels {
+  @apply font-bold text-gray-900 bg-transparent border-transparent shadow-none;
+}
+
+/* Custom styles for Simple-DataTables */
+.dataTable-wrapper {
+  @apply z-0 border-2 rounded-md bg-gray-50;
+}
+
+.dataTable-top {
+  @apply text-gray-500;
+}
+
+table.dataTable-table {
+  @apply w-full text-left border-collapse;
+}
+
+table.dataTable-table > tbody {
+  @apply align-middle;
+}
+
+table.dataTable-table > tbody > tr > td {
+  @apply align-middle border-b;
+}
+
+.dataTable-bottom {
+  @apply text-gray-500;
+}
+
+select.dataTable-selector {
+  @apply inline-flex items-center w-16 px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md;
+}
+
+select.dataTable-selector:hover {
+  @apply text-gray-700 bg-gray-50;
+}
+
+select.dataTable-selector:focus {
+  @apply outline-none bg-gray-50;
+}
+
+select.dataTable-selector:active {
+  @apply bg-gray-50;
+}
+
+input.dataTable-input {
+  @apply block w-full mt-1 border-gray-300 rounded-md shadow-sm;
+}
+
+input.dataTable-input:focus {
+  @apply border-blue-300 ring ring-blue-200 ring-opacity-50;
+}
+
+.dataTable-pagination {
+  @apply relative z-0 inline-flex rounded-md shadow-sm;
+}
+
+.dataTable-pagination .dataTable-pagination-list  li {
+  @apply relative inline-flex items-center text-sm font-medium leading-5 text-gray-500 bg-white border border-gray-300 cursor-default;
+}
+
+ul.dataTable-pagination-list > li:first-child {
+  @apply rounded-l-md;
+}
+
+ul.dataTable-pagination-list > li:last-child {
+  @apply rounded-r-md;
+}
+
+ul.dataTable-pagination-list li > a {
+  @apply relative inline-flex items-center px-4 py-2 -ml-px transition duration-150 ease-in-out;
+}
+
+ul.dataTable-pagination-list li > a:hover {
+  @apply text-gray-400 bg-transparent;
+}
+
+ul.dataTable-pagination-list li > a:focus {
+  @apply z-10 outline-none ring ring-blue-300;
+}
+
+ul.dataTable-pagination-list li.active > a {
+  @apply text-gray-500 bg-transparent;
+}
+
+ul.dataTable-pagination-list li.active > a:hover {
+  @apply text-gray-400 bg-transparent;
+}
