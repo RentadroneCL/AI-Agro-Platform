@@ -1,13 +1,27 @@
-# droneraising solar
+# AI Agro
 
-[![Continuous Integration](https://github.com/afariasfermin/droneraising-next/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/afariasfermin/droneraising-next/actions/workflows/continuous-integration.yml)
+[![Continuous Integration](https://github.com/RentadroneCL/AI-Agro-Platform/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/RentadroneCL/AI-Agro-Platform/actions/workflows/continuous-integration.yml)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 [Rentadrone.cl](https://rentadrone.cl).
 
+# Forum
+
+This project is part of the [UNICEF Innovation Fund](https://unicef-if.discourse.group/c/projects/rentadrone/10). You can post comments or questions about each category of [Rentadrone Developers](https://rentadrone.cl/developers/) algorithms. We encourage users to participate in the forum and to engage with fellow users.
+
+# Developers
+
+Help improve our software! We welcome contributions from everyone, whether to add new features, improve speed, fix existing bugs or add support. [Check our code of conduct](CODE_OF_CONDUCT.md), [the contributing guidelines](CONTRIBUTING.md) and how decisions are made.
+
+Any code contributions are welcomed as long as they are discussed in [Github Issues](https://github.com/RentadroneCL/AI-Agro-Platform/issues) with maintainers. Be aware that if you decide to change something and submit a PR on your own, it may not be accepted.
+
+## Creating an issue
+
+You can open a new issue based on code from an existing pull request. For more information, see [the template for filling issues](https://github.com/RentadroneCL/AI-Agro-Platform/blob/master/.github/ISSUE_TEMPLATE/feature_request.md)
+
 # Contributing
 
-Contributions are **welcome** and will be fully **credited**. We accept contributions via Pull Requests on [GitHub](https://github.com/afariasfermin/droneraising-next).
+Contributions are **welcome** and will be fully **credited**. We accept contributions via Pull Requests on [GitHub](https://github.com/RentadroneCL/AI-Agro-Platform).
 
 ## Pull Requests
 
@@ -25,10 +39,10 @@ Contributions are **welcome** and will be fully **credited**. We accept contribu
 
 If you discover a security vulnerability within lms, please send an e-mail to lms team via [contacto@rentadrone.cl](mailto:contacto@rentadrone.cl). All security vulnerabilities will be promptly addressed.
 
-## [Code of Conduct](https://github.com/RentadroneCL/droneraising/blob/master/CODE_OF_CONDUCT.md)
+## [Code of Conduct](https://github.com/RentadroneCL/AI-Agro-Platform/blob/master/CODE_OF_CONDUCT.md)
 
 The lms code of conduct is derived from the [Contributor Covenant](https://www.contributor-covenant.org). Any violations of the code of conduct may be reported to [Rentadrone.cl](mailto:contacto@rentadrone.cl)
 
 ## License
 
-droneraising solar software is licensed under the [EULA license.](LICENSE.md)
+AI Agro software is licensed under the [MIT license.](LICENSE.md)
