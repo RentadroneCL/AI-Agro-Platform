@@ -1,11 +1,11 @@
 {
-    "name": "rentadrone.cl/droneraising",
+    "name": "rentadrone.cl/droneraising-crops",
     "type": "project",
     "description": "Administration tool for your organization projects, with an intuitive control panel, team accounts, and more.",
-    "license": "EULA",
+    "license": "MIT",
     "support": {
-        "issues": "https://github.com/afariasfermin/droneraising-next/issues",
-        "source": "https://github.com/afariasfermin/droneraising-next"
+        "issues": "https://github.com/afariasfermin/droneraising-crops/issues",
+        "source": "https://github.com/afariasfermin/droneraising-crops"
     },
     "authors": [
         {

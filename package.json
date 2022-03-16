@@ -13,10 +13,10 @@
         "@babel/core": "^7.16.7",
         "@babel/plugin-proposal-class-properties": "^7.16.7",
         "@babel/preset-env": "^7.16.7",
-        "@fortawesome/fontawesome-free": "^5.15.2",
+        "@fortawesome/fontawesome-free": "^6.0.0",
         "@mapbox/geojson-merge": "^1.1.1",
-        "@tailwindcss/forms": "^0.3.1",
-        "@tailwindcss/typography": "^0.4.0",
+        "@tailwindcss/forms": "^0.4.0",
+        "@tailwindcss/typography": "^0.5.0",
         "@turf/meta": "^6.3.0",
         "@uppy/core": "^1.16.0",
         "@uppy/dashboard": "^1.16.0",
@@ -33,7 +33,7 @@
         "postcss": "^8.1.14",
         "postcss-import": "^14.0.1",
         "simple-datatables": "^3.0.2",
-        "tailwindcss": "^2.2.2",
+        "tailwindcss": "^3.0.0",
         "threads-plugin": "^1.4.0"
     }
 }
