@@ -1,6 +1,7 @@
 # AI Agro
 
 [![Continuous Integration](https://github.com/RentadroneCL/AI-Agro-Platform/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/RentadroneCL/AI-Agro-Platform/actions/workflows/continuous-integration.yml)
+[![License](https://poser.pugx.org/composer/spdx-licenses/license)](https://packagist.org/packages/composer/spdx-licenses)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 [Rentadrone.cl](https://rentadrone.cl).
