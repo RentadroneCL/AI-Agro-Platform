@@ -19,17 +19,11 @@
     </div>
   @endif
 
-  <div x-data="{ tab: '#overview' }">
+  <div x-data="{ tab: '#map' }">
     <nav class="bg-gray-200 border-b-2 border-gray-300">
       <div class="px-4 max-w-7xl sm:px-6 lg:px-8">
         <div class="flex justify-between h-full md:h-16">
           <div class="flex flex-col md:flex-row">
-            <div class="space-x-8 sm:-my-px sm:ml-10 sm:flex">
-              <a class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 text-gray-500 transition duration-150 ease-in-out border-b-2 cursor-pointer hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300" :class="{'text-gray-700 border-blue-400 border-b-2 font-semibold': tab === '#overview'}" @click="tab = '#overview'">
-                {{ __('Overview') }}
-              </a>
-            </div>
-
             <div class="space-x-8 sm:-my-px sm:ml-10 sm:flex">
               <a class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 text-gray-500 transition duration-150 ease-in-out border-b-2 cursor-pointer hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300" :class="{'text-gray-700 border-blue-400 border-b-2 font-semibold': tab === '#map'}" @click="tab = '#map'">
                 {{ __('Map') }}
@@ -59,12 +53,6 @@
         </div>
       </div>
     </nav>
-
-    <div x-show="tab === '#overview'" @cloak>
-      <div class="h-full py-10 mx-auto bg-white sm:px-6 lg:px-8">
-        <livewire:overview :model="$inspection">
-      </div>
-    </div>
 
     <div x-show="tab === '#map'" @cloak>
       <div class="max-w-full px-6 mx-auto md:px-0">

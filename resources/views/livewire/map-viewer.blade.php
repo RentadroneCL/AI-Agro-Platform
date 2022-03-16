@@ -9,7 +9,7 @@
           </div>
 
           <div class="flex flex-col items-center justify-center p-4" x-data="{ open: true }">
-            <button @click="open = !open" class="inline-flex items-center w-full px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50">
+            <button @click="open = !open" class="inline-flex items-center w-full px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md fotn-bold hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50">
               {{ __('Layers') }} <i class="ml-auto text-gray-400 fas fa-fw" :class="{ 'fa-chevron-down': !open, 'fa-chevron-up': open }"></i>
             </button>
 
@@ -42,38 +42,29 @@
           </div>
 
           <div class="flex flex-col items-center justify-center p-4" x-data="{ open: false }">
-            <button @click="open = !open" class="inline-flex items-center w-full px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50">
-              {{ __('Legend') }} <i class="ml-auto text-gray-400 fas fa-fw" :class="{ 'fa-chevron-down': !open, 'fa-chevron-up': open }"></i>
+            <button @click="open = !open" class="inline-flex items-center w-full px-3 py-2 text-sm font-medium font-bold leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50">
+              {{ __('NDVI mean') }} <i class="ml-auto text-gray-400 fas fa-fw" :class="{ 'fa-chevron-down': !open, 'fa-chevron-up': open }"></i>
             </button>
 
             <div class="transition-all duration-700" x-show="open">
-              <ul class="list-none">
-                <li class="inline-flex items-center w-full px-3 py-2 text-sm text-gray-700">
-                  1. <div class="w-4 h-4 mx-2 rounded-full" style="background-color:rgb(255, 255, 0);"></div> An Affected Cell or Connection
+              <ul class="font-semibold text-gray-700 list-none">
+                <li class="inline-flex items-center w-full px-3 py-2 text-sm">
+                  <div class="w-4 h-4 mx-2 bg-red-500 rounded"></div> <span class="mx-2">mean</span> <i class="mx-2 fa-solid fa-greater-than-equal fa-fw"></i> 0.60
                 </li>
-                <li class="inline-flex items-center w-full px-3 py-2 text-sm text-gray-700">
-                  2. <div class="w-4 h-4 mx-2 rounded-full" style="background-color:rgb(255, 255, 0);"></div> 2 to 4 Cells Affected
+                <li class="inline-flex items-center w-full px-3 py-2 text-sm">
+                  <div class="w-4 h-4 mx-2 bg-orange-400 rounded"></div> <span class="mx-2">0.60</span> <i class="mx-2 fa-solid fa-greater-than fa-fw"></i> <span class="mx-2">mean</span> <i class="mx-2 fa-solid fa-greater-than fa-fw"></i> <span class="mx-2">0.45</span>
                 </li>
-                <li class="inline-flex items-center w-full px-3 py-2 text-sm text-gray-700">
-                  3. <div class="w-4 h-4 mx-2 rounded-full" style="background-color:rgb(255, 255, 0);"></div> 5 or more Cells Affected
+                <li class="inline-flex items-center w-full px-3 py-2 text-sm">
+                  <div class="w-4 h-4 mx-2 rounded bg-amber-300"></div> <span class="mx-2">0.45</span> <i class="mx-2 fa-solid fa-greater-than fa-fw"></i> <span class="mx-2">mean</span> <i class="mx-2 fa-solid fa-greater-than fa-fw"></i> <span class="mx-2">0.30</span>
                 </li>
-                <li class="inline-flex items-center w-full px-3 py-2 text-sm text-gray-700">
-                  4. <div class="w-4 h-4 mx-2 rounded-full" style="background-color:rgb(3, 175, 255);"></div> Bypass Diode
+                <li class="inline-flex items-center w-full px-3 py-2 text-sm">
+                  <div class="w-4 h-4 mx-2 bg-green-500 rounded"></div> <span class="mx-2">0.30</span> <i class="mx-2 fa-solid fa-greater-than fa-fw"></i> <span class="mx-2">mean</span> <i class="mx-2 fa-solid fa-greater-than fa-fw"></i> <span class="mx-2">0.15</span>
                 </li>
-                <li class="inline-flex items-center w-full px-3 py-2 text-sm text-gray-700">
-                  5. <div class="w-4 h-4 mx-2 rounded-full" style="background-color:rgb(229, 0, 3);"></div> Disconnected / Deactivated
+                <li class="inline-flex items-center w-full px-3 py-2 text-sm">
+                  <div class="w-4 h-4 mx-2 bg-teal-400 rounded"></div> <span class="mx-2">0.15</span> <i class="mx-2 fa-solid fa-greater-than fa-fw"></i> <span class="mx-2">mean</span> <i class="mx-2 fa-solid fa-greater-than fa-fw"></i> <span class="mx-2">0.00</span>
                 </li>
-                <li class="inline-flex items-center w-full px-3 py-2 text-sm text-gray-700">
-                  6. <div class="w-4 h-4 mx-2 rounded-full" style="background-color:rgb(229, 0, 3);"></div> Connections or Others
-                </li>
-                <li class="inline-flex items-center w-full px-3 py-2 text-sm text-gray-700">
-                  7. <div class="w-4 h-4 mx-2 rounded-full" style="background-color:rgb(255, 127, 0);"></div> Soiling / Dirty
-                </li>
-                <li class="inline-flex items-center w-full px-3 py-2 text-sm text-gray-700">
-                  8. <div class="w-4 h-4 mx-2 rounded-full" style="background-color:rgb(255, 127, 0);"></div> Damaged Tracker
-                </li>
-                <li class="inline-flex items-center w-full px-3 py-2 text-sm text-gray-700">
-                  9. <div class="w-4 h-4 mx-2 rounded-full" style="background-color:rgb(255, 127, 0);"></div> Shadowing
+                <li class="inline-flex items-center w-full px-3 py-2 text-sm">
+                  <div class="w-4 h-4 mx-2 rounded bg-slate-900"></div> <span class="mx-2">mean</span> <i class="mx-2 fa-solid fa-greater-than fa-fw"></i> <span class="mx-2">0.00</span>
                 </li>
               </ul>
             </div>
@@ -83,7 +74,7 @@
         <div id="map-container" class="w-full m-5 rounded h-96 md:h-screen md:w-4/5 md:m-0 md:rounded-none md:rounded-r-lg"></div>
       </div>
 
-      <div x-data="{ overlay: false, panelInfo: false, anomalyInfo: true, imageInfo: false, annotations: false }" id="slide-over" :class="{ 'hidden': !overlay }" class="fixed inset-0 overflow-hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+      <div x-data="{ overlay: false, panelInfo: true }" id="slide-over" :class="{ 'hidden': !overlay }" class="fixed inset-0 overflow-hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
         <div class="absolute inset-0 overflow-hidden">
           <!--
             Background overlay, show/hide based on slide-over state.
@@ -134,95 +125,41 @@
 
               <div class="flex flex-col h-full py-16 overflow-y-scroll bg-white shadow-xl">
                 <div class="px-4 py-3 sm:px-6">
-                  <h2 class="text-lg font-bold text-gray-900" id="slide-over-title">
-                    <span id="panel" class="uppercase"></span>
+                  <h2 class="inline-flex items-center justify-start text-lg font-bold text-gray-900" id="slide-over-title">
+                    <i class="mr-2 text-green-500 fa-solid fa-leaf fa-fw"></i> <span id="plant-number" class="uppercase"></span>
                   </h2>
                 </div>
-
-                <livewire:sync-panel-information-form :model='$model'>
 
                 <div class="relative flex-1 px-4 sm:px-6">
                   <div class="absolute inset-0 px-4 sm:px-6">
                     <div class="h-full" aria-hidden="true">
                       <table class="w-full table-auto" :class="{ 'mb-2': panelInfo }">
-                        <button type="button" @click="anomalyInfo = !anomalyInfo" class="inline-flex items-center justify-between w-full px-4 py-2 my-2 font-semibold transition duration-150 ease-in-out border-transparent rounded-md focus:bg-gray-50 active:bg-gray-50 hover:bg-gray-50 focus:outline-none" :class="{ 'text-gray-600': !location, 'text-gray-700 bg-gray-50': location }">
-                          {{ __('Thermal Anomaly') }} <i class="fas fa-fw" :class="{ 'fa-chevron-down': !anomalyInfo, 'fa-chevron-up': anomalyInfo }"></i>
-                        </button>
-                        <tbody x-show="anomalyInfo">
-                          <tr>
-                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('Code') }}</th>
-                            <td class="p-4 text-gray-500 border-b border-gray-100" id="fail-code"></td>
-                          </tr>
-                          <tr>
-                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('Type') }}</th>
-                            <td class="p-4 text-gray-500 border-b border-gray-100" id="fail-type"></td>
-                          </tr>
-                          <tr>
-                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('Severity') }}</th>
-                            <td class="p-4 text-gray-500 border-b border-gray-100" id="severity-level"></td>
-                          </tr>
-                          <tr>
-                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('Max Temperature') }}</th>
-                            <td class="p-4 text-gray-500 border-b border-gray-100" id="max-temperature"></td>
-                          </tr>
-                          <tr>
-                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('Mean Temperature') }}</th>
-                            <td class="p-4 text-gray-500 border-b border-gray-100" id="mean-temperature"></td>
-                          </tr>
-                          <tr>
-                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('Reference Temperature') }}</th>
-                            <td class="p-4 text-gray-500 border-b border-gray-100" id="ref-temperature"></td>
-                          </tr>
-                        </tbody>
-                      </table>
-
-                      <table class="w-full table-auto" :class="{ 'mb-2': panelInfo }">
                         <button type="button" @click="panelInfo = !panelInfo" class="inline-flex items-center justify-between w-full px-4 py-2 my-2 font-semibold transition duration-150 ease-in-out border-transparent rounded-md focus:bg-gray-50 active:bg-gray-50 hover:bg-gray-50 focus:outline-none" :class="{ 'text-gray-600': !location, 'text-gray-700 bg-gray-50': location }">
-                          {{ __('Location') }} <i class="fas fa-fw" :class="{ 'fa-chevron-down': !panelInfo, 'fa-chevron-up': panelInfo }"></i>
+                          {{ __('NDVI Information') }} <i class="fas fa-fw" :class="{ 'fa-chevron-down': !panelInfo, 'fa-chevron-up': panelInfo }"></i>
                         </button>
                         <tbody x-show="panelInfo">
                           <tr>
-                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('Zone') }}</th>
-                            <td class="p-4 text-gray-500 border-b border-gray-100" id="zone"></td>
+                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('NDVI Mean') }}</th>
+                            <td class="p-4 text-gray-500 border-b border-gray-100" id="ndvi"></td>
                           </tr>
                           <tr>
-                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('Sub Zone') }}</th>
-                            <td class="p-4 text-gray-500 border-b border-gray-100" id="sub-zone"></td>
+                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('GNDVI Mean') }}</th>
+                            <td class="p-4 text-gray-500 border-b border-gray-100" id="gndvi"></td>
                           </tr>
                           <tr>
-                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('String') }}</th>
-                            <td class="p-4 text-gray-500 border-b border-gray-100" id="string"></td>
+                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('LCI Mean') }}</th>
+                            <td class="p-4 text-gray-500 border-b border-gray-100" id="lci"></td>
                           </tr>
                           <tr>
-                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('Module') }}</th>
-                            <td class="p-4 text-gray-500 border-b border-gray-100" id="module"></td>
+                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('NDRE Mean') }}</th>
+                            <td class="p-4 text-gray-500 border-b border-gray-100" id="ndre"></td>
                           </tr>
                           <tr>
-                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('Serial Number') }}</th>
-                            <td class="p-4 text-gray-500 border-b border-gray-100" id="serial-number"></td>
+                            <th class="p-4 font-medium text-left text-gray-400 border-b">{{ __('OSAVI Mean') }}</th>
+                            <td class="p-4 text-gray-500 border-b border-gray-100" id="osavi"></td>
                           </tr>
                         </tbody>
                       </table>
-
-                      <div class="flex flex-col justify-start w-full">
-                        <button type="button" @click="imageInfo = !imageInfo" class="inline-flex items-center justify-between w-full px-4 py-2 my-2 font-semibold transition duration-150 ease-in-out border-transparent rounded-md focus:bg-gray-50 active:bg-gray-50 hover:bg-gray-50 focus:outline-none" :class="{ 'text-gray-600': !location, 'text-gray-700 bg-gray-50': location }">
-                          {{ __('Image File') }} <i class="fas fa-fw" :class="{ 'fa-chevron-down': !imageInfo, 'fa-chevron-up': imageInfo }"></i>
-                        </button>
-                        <div class="block w-full px-4 py-2" x-show="imageInfo">
-                          <h2 id="img-filename" class="font-bold text-left text-gray-700">N/A</h2>
-                          <p id="img-size" class="w-full mt-1 text-sm font-semibold text-gray-600 uppercase">N/A</p>
-                          <img id="img-file" class="w-full mt-2 mb-4 rounded-lg shadow h-80" src="" alt="">
-                        </div>
-                      </div>
-
-                      {{-- <div class="flex flex-col justify-start w-full">
-                        <button type="button" @click="annotations = !annotations" class="inline-flex items-center justify-between w-full px-4 py-2 my-2 font-semibold transition duration-150 ease-in-out border-transparent rounded-md focus:bg-gray-50 active:bg-gray-50 hover:bg-gray-50 focus:outline-none" :class="{ 'text-gray-600': !location, 'text-gray-700 bg-gray-50': location }">
-                          {{ __('Annotations') }} <i class="fas fa-fw" :class="{ 'fa-chevron-down': !annotations, 'fa-chevron-up': annotations }"></i>
-                        </button>
-                        <div class="block w-full px-4 py-2" x-show="annotations">
-                          <livewire:annotations :model="$model">
-                        </div>
-                      </div> --}}
                     </div>
                   </div>
                 </div>
@@ -324,120 +261,23 @@
       // Sync map cache.
       syncMap(map);
 
-      /**
-      * Get the type of failure.
-      *
-      * @param {number} code - layer key.
-      */
-      const getFailType = (code = null) => {
-        if (!code) {
-          return 'N/A';
-        }
-
-        // Available fail types.
-        const failTypes = {
-          1: "{{ __('AN AFFECTED CELL OR CONNECTION') }}",
-          2: "{{ __('2 TO 4 CELLS AFFECTED') }}",
-          3: "{{ __('5 OR MORE CELLS AFFECTED') }}",
-          4: "{{ __('BYPASS DIODE') }}",
-          5: "{{ __('DISCONNECTED / DEACTIVATED SINGLE PANEL') }}",
-          6: "{{ __('CONNECTIONS OR OTHERS') }}",
-          7: "{{ __('SOILING / DIRTY') }}",
-          8: "{{ __('DAMAGED TRACKER') }}",
-          9: "{{ __('SHADOWING') }}",
-          10: "{{ __('MISSING PANEL') }}",
-          11: "{{ __('DISCONNECTED / DEACTIVATED STRING') }}",
-          12: "{{ __('DISCONNECTED / DEACTIVATED ZONE') }}",
-        };
-
-        // subtract 1 to match the type, because the return value is an array.
-        return Object.values(failTypes)[--code] ?? 'N/A';
-      };
-
-      /**
-      * Get the severity level.
-      *
-      * @param {number} value - layer key.
-      */
-      const getSeverityLevel = (value = null) => {
-        if (!value) {
-          return 'N/A';
-        }
-
-        const severityLevels = {
-          1: "{{ __('Low / Minor') }}",
-          2: "{{ __('Middle / Major') }}",
-          3: "{{ __('High / Critical') }}",
-          4: 'N/A',
-        };
-
-        return severityLevels[value] ?? 'N/A';
-      };
-
-      /**
-      * Retrieve the ir image file if it exists.
-      *
-      * @param {value} filename - filename.
-      */
-      const getImage = async (value = null) => {
-        // placeholder image.
-        const notFound = {
-          file_name: 'N/A',
-          file_url: `https://via.placeholder.com/512`,
-          name: 'N/A',
-          size: 'N/A',
-        };
-
-        if (value === 'undefined' || value === null) {
-          return notFound;
-        }
-
-        return axios.post("{{ route('retrieve-image') }}", { filename: value, model_id: "{{ $model->id }}" })
-          .then(response => {
-            if (response.data.status === 'succeeded') {
-              return {...response.data.data};
-            }
-
-            return notFound;
-          })
-          .catch(error => notFound);
-      };
-
       // Slide over panel elements initial state.
       const slideOverElement = document.getElementById('slide-over');
 
-      let featurePanel       = document.getElementById('panel');
-      let featureSerial      = document.getElementById('serial-number');
-      let featureZone        = document.getElementById('zone');
-      let featureSubZone     = document.getElementById('sub-zone');
-      let featureString      = document.getElementById('string');
-      let featureModule      = document.getElementById('module');
-      let featureFailCode    = document.getElementById('fail-code');
-      let featureFailType    = document.getElementById('fail-type');
-      let featureSeverity    = document.getElementById('severity-level');
-      let featureTempMax     = document.getElementById('max-temperature');
-      let featureTempMean    = document.getElementById('mean-temperature');
-      let featureTempRef     = document.getElementById('ref-temperature');
-      let featureImgFilename = document.getElementById('img-filename');
-      let featureImgSize     = document.getElementById('img-size');
-      let featureImgFile     = document.getElementById('img-file');
+      let featureNdviMean = document.getElementById('ndvi');
+      let featureGndviMean = document.getElementById('gndvi');
+      let featureLciMean = document.getElementById('lci');
+      let featureNdreMean = document.getElementById('ndre');
+      let featureOsaviMean = document.getElementById('osavi');
+      let featurePlantNumber = document.getElementById('plant-number');
 
       const resetFeatures = () => {
-        featurePanel.innerHTML       = 'N/A';
-        featureSerial.innerHTML      = 'N/A';
-        featureZone.innerHTML        = 'N/A';
-        featureSubZone.innerHTML     = 'N/A';
-        featureString.innerHTML      = 'N/A';
-        featureModule.innerHTML      = 'N/A';
-        featureFailCode.innerHTML    = 'N/A';
-        featureFailType.innerHTML    = 'N/A';
-        featureSeverity.innerHTML    = 'N/A';
-        featureTempMax.innerHTML     = 'N/A';
-        featureTempMean.innerHTML    = 'N/A';
-        featureTempRef.innerHTML     = 'N/A';
-        featureImgFilename.innerHTML = 'N/A';
-        featureImgSize.innerHTML     = 'N/A';
-        featureImgFile.innerHTML     = 'N/A';
+        featureNdviMean.innerHTML = 'N/A';
+        featureGndviMean.innerHTML = 'N/A';
+        featureLciMean.innerHTML = 'N/A';
+        featureNdreMean.innerHTML = 'N/A';
+        featureOsaviMean.innerHTML = 'N/A';
+        featurePlantNumber.innerHTML = 'N/A';
       };
 
       // Vector slide over panel information.
@@ -446,271 +286,117 @@
         resetFeatures();
 
         map.forEachFeatureAtPixel(evt.pixel, async (feature, layer) => {
-          const clickedFeaturePanel    = feature.get('panel') ?? 'N/A';
-          const clickedFeatureSerial   = feature.get('serial') ?? 'N/A';
-          const clickedFeatureZone     = feature.get('zone') ?? 'N/A';
-          const clickedFeatureSubZone  = feature.get('subZone') ?? 'N/A';
-          const clickedFeatureString   = feature.get('string') ?? 'N/A';
-          const clickedFeatureModule   = feature.get('module') ?? clickedFeaturePanel;
-          const clickedFeatureFailCode = feature.get('failCode') ?? 'N/A';
-          const clickedFeatureFailType = feature.get('failCode') ?? 'N/A';
-          const clickedFeatureSeverity = feature.get('severity') ?? 'N/A';
-          const clickedFeatureTempMax  = feature.get('tempMax') ?? 'N/A';
-          const clickedFeatureTempMean = feature.get('tempMean') ?? 'N/A';
-          const clickedFeatureTempRef  = feature.get('tempRef') ?? 'N/A';
-          const clickedFeatureFilename = feature.get('filename') ?? null;
+          const clickedFeatureNdviMean = feature.get('NDVI_mean') ?? 'N/A';
+          const clickedFeatureGndviMean = feature.get('GNDVI_mean') ?? 'N/A';
+          const clickedFeatureLciMean = feature.get('LCI_mean') ?? 'N/A';
+          const clickedFeatureNdreMean = feature.get('NDRE_mean') ?? 'N/A';
+          const clickedFeatureOsaviMean = feature.get('OSAVI_mean') ?? 'N/A';
+          const clickedFeaturePlantNumber = feature.get('plantNumber') ?? 'N/A';
 
           // Set values.
-          featurePanel.innerHTML    = clickedFeaturePanel;
-          featureSerial.innerHTML   = clickedFeatureSerial;
-          featureZone.innerHTML     = clickedFeatureZone;
-          featureSubZone.innerHTML  = clickedFeatureSubZone;
-          featureString.innerHTML   = clickedFeatureString;
-          featureModule.innerHTML   = clickedFeatureModule;
-          featureFailCode.innerHTML = clickedFeatureFailCode;
-          featureFailType.innerHTML = getFailType(clickedFeatureFailType);
-          featureSeverity.innerHTML = getSeverityLevel(clickedFeatureSeverity);
-          featureTempMax.innerHTML  = `${clickedFeatureTempMax} °C`;
-          featureTempMean.innerHTML = `${clickedFeatureTempMean} °C`;
-          featureTempRef.innerHTML  = `${clickedFeatureTempRef} °C`;
-
-          await getImage(clickedFeatureFilename).then((img) => {
-            featureImgFilename.innerHTML = clickedFeatureFilename;
-            featureImgSize.innerHTML = img.size;
-            featureImgFile.setAttribute('src', img.file_url);
-            featureImgFile.setAttribute('alt', clickedFeatureFilename);
-          });
+          featureNdviMean.innerHTML = clickedFeatureNdviMean.toFixed(2);
+          featureGndviMean.innerHTML = clickedFeatureGndviMean.toFixed(2);
+          featureLciMean.innerHTML = clickedFeatureLciMean.toFixed(2);
+          featureNdreMean.innerHTML = clickedFeatureNdreMean.toFixed(2);
+          featureOsaviMean.innerHTML = clickedFeatureOsaviMean.toFixed(2);
+          featurePlantNumber.innerHTML = clickedFeaturePlantNumber;
 
           slideOverElement.classList.remove('hidden');
-
-          // fulfill form data
-          const panelSyncForm = document.getElementById('panel-sync-form');
-
-          if (document.body.contains(panelSyncForm)) {
-            const fillData = {
-              panel_id: clickedFeaturePanel,
-              panel_zone: clickedFeatureZone,
-              panel_sub_zone: clickedFeatureSubZone,
-              panel_string: clickedFeatureString,
-            }
-
-            const panelSyncFormElements = panelSyncForm.elements;
-
-            const setFormValues = () => {
-              panelSyncFormElements['panel_id'].value       = fillData.panel_id;
-              panelSyncFormElements['panel_zone'].value     = fillData.panel_zone;
-              panelSyncFormElements['panel_sub_zone'].value = fillData.panel_sub_zone;
-              panelSyncFormElements['panel_string'].value   = fillData.panel_string;
-            };
-
-            setFormValues();
-
-            Livewire.emit('panel-info', fillData);
-          }
         });
       });
 
       // Styling of vector features.
       const stylesForVectorFeatures = (feature) => {
         // Properties.
-        let failCodeProperty = feature.get('failCode');
+        let ndviMeanProperty = feature.get('NDVI_mean');
 
-        // Fail types colors - styles for polygons.
-        const affectedCellOrConnectionFillStyle = new Fill({
-          color: 'rgba(255, 255, 0, 0.3)',
+        let ndviMean = ndviMeanProperty.toFixed(2);
+
+        // styles for polygons.
+        const bgSlate900FillStyle = new Fill({
+          color: 'rgba(15, 23, 42, 0.3)',
         });
 
-        const twoFourCellsAffectedFillStyle = new Fill({
-          color: 'rgba(255, 255, 0, 0.3)',
+        const bgTeal400FillStyle = new Fill({
+          color: 'rgba(45, 212, 191, 0.3)',
         });
 
-        const fiveOrMoreCellsAffectedFillStyle = new Fill({
-          color: 'rgba(255, 255, 0, 0.3)',
+        const bgGreen500FillStyle = new Fill({
+          color: 'rgba(34, 197, 94, 0.3)',
         });
 
-        const bypassDiodeFillStyle = new Fill({
-          color: 'rgba(3, 175, 255, 0.3)',
+        const bgAmber300FillStyle = new Fill({
+          color: 'rgba(252, 211, 77, 0.3)',
         });
 
-        const disconnectedDeactivatedFillStyle = new Fill({
-          color: 'rgba(229, 0, 3, 0.3)',
+        const bgOrange400FillStyle = new Fill({
+          color: 'rgba(251, 146, 60, 0.3)',
         });
 
-        const connectionsOrOthersFillStyle = new Fill({
-          color: 'rgba(229, 0, 3, 0.3)',
-        });
-
-        const soilingDirtyFillStyle = new Fill({
-          color: 'rgba(255, 127, 0, 0.3)',
-        });
-
-        const damagedTrackerFillStyle = new Fill({
-          color: 'rgba(255, 127, 0, 0.3)',
-        });
-
-        const shadowingFillStyle = new Fill({
-          color: 'rgba(255, 127, 0, 0.3)',
-        });
-
-        const missingPanelFillStyle = new Fill({
-          color: 'rgba(12, 56, 112, 0.1)',
+        const bgRed500FillStyle = new Fill({
+          color: 'rgba(239, 68, 68, 0.3)',
         });
 
         const defaultFillStyle = new Fill({
           color: 'rgba(0, 60, 136, 0.1)',
         });
 
-        let featureTextLabel = new TextStyle({
-          text: failCodeProperty.toString(),
-          scale: 1.5,
-          fill: new Fill({
-            color: 'rgb(31 41 55)',
-          }),
-        });
-
-        switch (failCodeProperty) {
-          case 1:
-            return feature.setStyle(new Style({
-              fill: affectedCellOrConnectionFillStyle,
-              stroke: new Stroke({
-                color: [255, 255, 0, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
-
-          case 2:
-            return feature.setStyle(new Style({
-              fill: twoFourCellsAffectedFillStyle,
-              stroke: new Stroke({
-                color: [255, 255, 0, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
-
-          case 3:
-            return feature.setStyle(new Style({
-              fill: fiveOrMoreCellsAffectedFillStyle,
-              stroke: new Stroke({
-                color: [255, 255, 0, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
-
-          case 4:
-            return feature.setStyle(new Style({
-              fill: bypassDiodeFillStyle,
-              stroke: new Stroke({
-                color: [3, 175, 255, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
-
-          case 5:
-            return feature.setStyle(new Style({
-              fill: disconnectedDeactivatedFillStyle,
-              stroke: new Stroke({
-                color: [229, 0, 3, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
-
-          case 6:
-            return feature.setStyle(new Style({
-              fill: connectionsOrOthersFillStyle,
-              stroke: new Stroke({
-                color: [229, 0, 3, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
-
-          case 7:
-            return feature.setStyle(new Style({
-              fill: soilingDirtyFillStyle,
-              stroke: new Stroke({
-                color: [255, 127, 0, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
-
-          case 8:
-            return feature.setStyle(new Style({
-              fill: damagedTrackerFillStyle,
-              stroke: new Stroke({
-                color: [255, 127, 0, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
-
-          case 9:
-            return feature.setStyle(new Style({
-              fill: shadowingFillStyle,
-              stroke: new Stroke({
-                color: [255, 127, 0, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
-
-          case 10:
-            return feature.setStyle(new Style({
-              fill: missingPanelFillStyle,
-              stroke: new Stroke({
-                color: [12, 56, 112, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
-
-          case 11:
-            return feature.setStyle(new Style({
-              fill: disconnectedDeactivatedFillStyle,
-              stroke: new Stroke({
-                color: [229, 0, 3, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
-
-          case 12:
-            return feature.setStyle(new Style({
-              fill: disconnectedDeactivatedFillStyle,
-              stroke: new Stroke({
-                color: [229, 0, 3, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
-
-          default:
-            return feature.setStyle(new Style({
-              fill: defaultFillStyle,
-              stroke: new Stroke({
-                color: [0, 60, 136, 0.3],
-                width: 1.25,
-              }),
-              text: featureTextLabel,
-            }));
-            break;
+        if (ndviMean < 0) {
+          feature.setStyle(new Style({
+            fill: bgSlate900FillStyle,
+            stroke: new Stroke({
+              color: [15, 23, 42, 0.3],
+              width: 1.25,
+            })
+          }));
+        } else if (ndviMean >= 0 && ndviMean < 0.15) {
+          feature.setStyle(new Style({
+            fill: bgTeal400FillStyle,
+            stroke: new Stroke({
+              color: [45, 212, 191, 0.3],
+              width: 1.25,
+            })
+          }));
+        } else if (ndviMean >= 0.15 && ndviMean < 0.30) {
+          feature.setStyle(new Style({
+            fill: bgGreen500FillStyle,
+            stroke: new Stroke({
+              color: [34, 197, 94, 0.3],
+              width: 1.25,
+            })
+          }));
+        } else if (ndviMean >= 0.30 && ndviMean < 0.45) {
+          feature.setStyle(new Style({
+            fill: bgAmber300FillStyle,
+            stroke: new Stroke({
+              color: [252, 211, 77, 0.3],
+              width: 1.25,
+            })
+          }));
+        } else if (ndviMean >= 0.45 && ndviMean < 0.60) {
+          feature.setStyle(new Style({
+            fill: bgOrange400FillStyle,
+            stroke: new Stroke({
+              color: [251, 146, 60, 0.3],
+              width: 1.25,
+            })
+          }));
+        } else if (ndviMean >= 0.60) {
+          feature.setStyle(new Style({
+            fill: bgRed500FillStyle,
+            stroke: new Stroke({
+              color: [239, 68, 68, 0.3],
+              width: 1.25,
+            })
+          }));
+        } else {
+          feature.setStyle(new Style({
+            fill: defaultFillStyle,
+            stroke: new Stroke({
+              color: [0, 60, 136, 0.3],
+              width: 1.25,
+            })
+          }));
         }
       };
 
