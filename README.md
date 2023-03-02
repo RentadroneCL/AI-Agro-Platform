@@ -1,6 +1,6 @@
-# Agro Platform
-
-[simplemap.io](https://simplemap.io)
+<p align="center" dir="auto">
+  <a href="https://simplemap.io" rel="nofollow"><img src="https://user-images.githubusercontent.com/1696665/222504918-2c16d594-be82-4914-8a19-e8af5dfb4b26.png" width="500" style="max-width: 100%;"></a>
+</p>
 
 <p align="center">
   <a href="https://github.com/RentadroneCL/AI-Agro-Platform/tags"><img src="https://img.shields.io/github/v/tag/RentadroneCL/AI-Agro-Platform?colorA=363a4f&style=for-the-badge"></a>
@@ -12,6 +12,8 @@
   <a href="https://github.com/RentadroneCL/AI-Agro-Platform/contributors"><img src="https://img.shields.io/github/contributors/RentadroneCL/AI-Agro-Platform?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
   <a href="https://opencollective.com/simple-map"><img src="https://img.shields.io/opencollective/sponsors/simple-map?colorA=363a4f&logo=open%20collective&style=for-the-badge"></a>
 </p>
+
+# Agro Platform
 
 ## To learn all about it, head over to the extensive [documentation](https://rentadronecl.github.io)
 
