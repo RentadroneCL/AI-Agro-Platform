@@ -15,7 +15,7 @@
 
 # Agro Platform
 
-## To learn all about it, head over to the extensive [documentation](https://rentadronecl.github.io)
+To learn all about it, head over to the extensive [documentation](https://rentadronecl.github.io)
 
 ## Developers
 
