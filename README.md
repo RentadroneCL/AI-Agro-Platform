@@ -12,7 +12,7 @@
   <a href="https://github.com/RentadroneCL/AI-Agro-Platform/issues"><img src="https://img.shields.io/github/issues/RentadroneCL/AI-Agro-Platform?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
   <a href="https://github.com/RentadroneCL/AI-Agro-Platform/contributors"><img src="https://img.shields.io/github/contributors/RentadroneCL/AI-Agro-Platform?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
   <a href="https://opencollective.com/simple-map"><img src="https://img.shields.io/opencollective/sponsors/simple-map?colorA=363a4f&logo=open%20collective&style=for-the-badge"></a>
-  <a href="https://discord.gg/V6mwD7GYa2"><img alt="Discord" src="https://img.shields.io/discord/1068207336419758080?style=for-the-badge&logo=discord&color=DDB6F2&logoColor=D9E0EE&labelColor=302D41"></a>
+  <a href="https://discord.gg/V6mwD7GYa2"><img alt="Discord" src="https://img.shields.io/discord/1068207336419758080?colorA=363a4f&style=for-the-badge&logo=discord&logoColor=D9E0EE"></a>
 </p>
 
 # Agro Platform
