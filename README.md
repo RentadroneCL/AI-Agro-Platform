@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/RentadroneCL/AI-Agro-Platform/tags"><img src="https://img.shields.io/osslifecycle/RentadroneCL/AI-Agro-Platform?style=for-the-badge&colorA=363a4f"></a>
+  <a href="https://github.com/RentadroneCL/AI-Agro-Platform/tags"><img src="https://img.shields.io/osslifecycle/RentadroneCL/AI-Agro-Platform?colorA=363a4f&style=for-the-badge"></a>
   <a href="https://github.com/RentadroneCL/AI-Agro-Platform/tags"><img src="https://img.shields.io/github/v/tag/RentadroneCL/AI-Agro-Platform?colorA=363a4f&style=for-the-badge"></a>
   <a href="https://github.com/RentadroneCL/AI-Agro-Platform/actions/workflows"><img src="https://img.shields.io/github/actions/workflow/status/RentadroneCL/AI-Agro-Platform/continuous-integration.yml?colorA=363a4f&label=Continuous%20Integration&logo=github&style=for-the-badge"></a>
   <a href="https://github.com/RentadroneCL/AI-Agro-Platform/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/RentadroneCL/AI-Agro-Platform?colorA=363a4f&style=for-the-badge"></a>
